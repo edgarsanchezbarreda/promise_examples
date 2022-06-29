@@ -11,20 +11,12 @@ window.onload = axios.get(newDeck)
         console.log(err)
     })
 
-const showDeckId = () => {
-    console.log(deckId)
-}
-
-
 let cardImg;
 const drawCard = () => {
     let newCard = `http://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`;
-
     axios.get(newCard)
         .then(res => {
             cardImg = res.data.cards[0].image
-            console.log(cardImg)
-
         })
         .catch(err => {
             console.log(err)
