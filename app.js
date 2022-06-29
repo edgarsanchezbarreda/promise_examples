@@ -66,16 +66,16 @@ let url = "http://numbersapi.com"
 //     })
 
 // #2
-let cardUrl = 'http://deckofcardsapi.com/api/deck/new/draw/?count=1'
+// let cardUrl = 'http://deckofcardsapi.com/api/deck/new/draw/?count=1'
 
-let cards = [];
+// let cards = [];
 
-for (let i = 1; i < 3; i++) {
-    cards.push(axios.get(cardUrl));
-}
-Promise.all(cards)
-    .then(cardsArr => {
-        for (res of cardsArr) {
-            console.log(`${res.data.cards[0].value} of ${res.data.cards[0].suit}.`)
-        }
-    })
+// for (let i = 1; i < 3; i++) {
+//     cards.push(axios.get(cardUrl));
+// }
+// Promise.all(cards)
+//     .then(cardsArr => {
+//         for (res of cardsArr) {
+//             console.log(`${res.data.cards[0].value} of ${res.data.cards[0].suit}.`)
+//         }
+//     })
